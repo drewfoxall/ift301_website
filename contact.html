@@ -5,41 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photography by Drew</title>
     <link rel="stylesheet" href="stylesheet.css" />
+    <script src="index.js"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="row">
-          <a href="index.html">Home </a>
-          <a href="services.html">Services </a>
-          <a href="contact.html">Contact</a>
-          <a href="description.html">Description </a>
-          <a href="aboutme.html">About me </a>
+    <div class="content-wrap">
+      <div class="header">
+        <div class="container">
+          <div class="row">
+            <a href="index.html">Home </a>
+            <a href="services.html">Services </a>
+            <a href="contact.html">Contact</a>
+            <a href="description.html">Description </a>
+            <a href="aboutme.html">About me </a>
+          </div>
         </div>
       </div>
-    </header>
-    <div class="container">
-      <div>
-        <h4 id="contactme">Contact Me</h4>
-        <ul id="contactlist">
-          <ul>
-            Email: andrewfoxall2001@gmail.com
-          </ul>
-          <ul>
-            Vero: @shotsbydrew
-          </ul>
-        </ul>
+
+      <div class="page-content">
+        <div class="container">
+          <div>
+            <h4 id="contactme">Contact Me</h4>
+            <ul id="contactlist">
+              <ul>
+                Email: andrewfoxall2001@gmail.com
+              </ul>
+              <ul>
+                Vero: @shotsbydrew
+              </ul>
+            </ul>
+          </div>
+          <div class="container">
+            <p id="contactparagraph">
+              Feel free to reach out to me if you have any questions about my
+              work, or if you would like to schedule a photoshoot!
+            </p>
+          </div>
+          <div class= "row">
+            <div class = "column-5">
+              <div class="container-form">
+                <form onsubmit="onSubmit(event)">
+                  <div>
+                    <div class="greetings">
+                      Please feel free to leave some feedback on the website!
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <label for="name"> Name: </label>
+                      <span class="error"></span>
+                    </div>
+                    <input id="name" type="text" />
+                    <br>
+                    <div>
+                      <label for="email"> Email:</label>
+                      <span class="error"></span>
+                    </div>
+                    <input id="email" type="text" />
+                    <br>
+                  </div>
+                  <div>
+                    <div>
+                      <label for="number"> Phone Number: </label>
+                      <span class="error"></span>
+                    </div>
+                    <input id="number" type="text" />
+                    <br>
+                    <div>
+                      <label for="feedback"> Feedback:</label>
+                      <span class="error"></span>
+                    </div>
+                    <input id="feedback" type="text" />
+                    <br>
+                  <button type="submit">Submit</button>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+          <div class="column-5">
+            <div class="contextphoto">
+              <img src="/photos/sky11.jpg" alt="Sky Photo #1" id="contactphoto" />
+            </div>
+            </div>
+
+          
+        </div>
       </div>
-      <div class="container">
-        <p id="contactparagraph">
-          Feel free to reach out to me if you have any questions about my work,
-          or if you would like to schedule a photoshoot!
-        </p>
-      </div>
-      <div class="contextphoto">
-        <img src="/photos/sky11.jpg" alt="Sky Photo #1" id="contactphoto" />
+      <div class="footer">
+        All Content is original product and reserved by
+        <a href="https://github.com/drewfoxall">Drew Foxall</a>
       </div>
     </div>
   </body>
-  <footer>All Content is original product and reserved by Drew Foxall</footer>
 </html>

@@ -5,54 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photography by Drew</title>
     <link rel="stylesheet" href="stylesheet.css" />
+    <script src="index.js"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
+    <div class="content-wrap">
+      <div class="header">
+        <div class="container">
+          <div class="row">
+            <a href="index.html">Home </a>
+            <a href="services.html">Services </a>
+            <a href="contact.html">Contact</a>
+            <a href="description.html">Description </a>
+            <a href="aboutme.html">About me </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <div>
+          <h3>Photography</h3>
+          <small>This is a collection of some of my favorite photos</small>
+        </div>
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01" />
+          <div id="caption"></div>
+        </div>
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+
+          // Get the image and insert it inside the modal - use its "alt" text as a caption
+          var img = document.getElementById("myImg");
+          var modalImg = document.getElementById("img01");
+          var captionText = document.getElementById("caption");
+          img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+          };
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+            modal.style.display = "none";
+          };
+        </script>
         <div class="row">
-          <a href="index.html">Home </a>
-          <a href="services.html">Services </a>
-          <a href="contact.html">Contact</a>
-          <a href="description.html">Description </a>
-          <a href="aboutme.html">About me </a>
+          <div class="column">
+            <img src="/photos/sky1.jpg" alt="Sky Photo #1" />
+            <img src="/photos/sky2.jpg" alt="Sky Photo #2" />
+            <img src="/photos/car2.jpg" alt="Car Photo #2" />
+            <img src="/photos/sky7.jpg" alt="Car Photo #7" />
+          </div>
+          <div class="column">
+            <img src="/photos/car4.jpg" alt="Car Photo #4" />
+            <img src="/photos/car5.jpg" alt="Car Photo #5" />
+            <img src="/photos/sky5.jpg" alt="Sky Photo #5" />
+            <img src="/photos/sky6.jpg" alt="Sky Photo #6" />
+          </div>
+          <div class="column">
+            <img src="/photos/car6.jpg" alt="Car Photo #6" />
+            <img src="/photos/sky3.jpg" alt="Sky Photo #3" />
+            <img src="/photos/car3.jpg" alt="Car Photo #3" />
+          </div>
+          <div class="column">
+            <img src="/photos/sky4.jpg" alt="Sky Photo #4" />
+            <img src="/photos/car1.jpg" alt="Car Photo #1" />
+            <img src="/photos/sky8.jpg" alt="Sky Photo #8" />
+          </div>
         </div>
       </div>
-    </header>
 
-    <div class="container">
-      <div>
-        <h3>Photography</h3>
-        <small>This is a collection of some of my favorite photos</small>
-      </div>
-
-      <div class="row">
-        <div class="column">
-          <img src="/photos/sky1.jpg" alt="Sky Photo #1" />
-          <img src="/photos/sky2.jpg" alt="Sky Photo #2" />
-          <img src="/photos/car2.jpg" alt="Car Photo #2" />
-          <img src="/photos/sky7.jpg" alt="Car Photo #7" />
-        </div>
-        <div class="column">
-          <img src="/photos/car4.jpg" alt="Car Photo #4" />
-          <img src="/photos/car5.jpg" alt="Car Photo #5" />
-          <img src="/photos/sky5.jpg" alt="Sky Photo #5" />
-          <img src="/photos/sky6.jpg" alt="Sky Photo #6" />
-        </div>
-        <div class="column">
-          <img src="/photos/car6.jpg" alt="Car Photo #6" />
-          <img src="/photos/sky3.jpg" alt="Sky Photo #3" />
-          <img src="/photos/car3.jpg" alt="Car Photo #3" />
-        </div>
-        <div class="column">
-          <img src="/photos/sky4.jpg" alt="Sky Photo #4" />
-          <img src="/photos/car1.jpg" alt="Car Photo #1" />
-          <img src="/photos/sky8.jpg" alt="Sky Photo #8" />
-        </div>
+      <div class="footer">
+        All Content is original product and reserved by
+        <a href="https://github.com/drewfoxall">Drew Foxall</a>
       </div>
     </div>
   </body>
-  <footer>
-    All Content is original product and reserved by
-    <a href="https://github.com/drewfoxall">Drew Foxall</a>
-  </footer>
 </html>
